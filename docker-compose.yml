@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  flaskauth0:
+    image: flaskauth0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5000
