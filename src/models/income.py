@@ -10,10 +10,10 @@ class Income(Transaction):
             description, amount, TransactionType.INCOME)
 
     def __repr__(self):
-        return '<Income(name={self.description!r})>'.format(self.self)
+        return '<Income(name={self.description!r})>'.format(self=self)
 
 
 class IncomeSchema(TransactionSchema):
     @post_load
-    def make_incomde(self, data):
+    def make_income(self, data):
         return Income(**data)
